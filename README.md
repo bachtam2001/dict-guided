@@ -85,8 +85,11 @@ conda install -y pytorch torchvision cudatoolkit=10.2 -c pytorch
 python -m pip install ninja yacs cython matplotlib tqdm opencv-python shapely scipy tensorboardX pyclipper Polygon3 weighted-levenshtein editdistance dict_trie
 
 # Install Detectron2
-python -m pip install detectron2 -f \
-  https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.10/index.html
+git clone https://github.com/facebookresearch/detectron2.git
+cd detectron2
+git reset --hard 9eb4831 # Fix Bezier error
+cd ..
+python -m pip install -e detectron2
 ```
 ### Check out the code and install: 
 ```sh
