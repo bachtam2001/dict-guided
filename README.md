@@ -93,7 +93,7 @@ python -m pip install -e detectron2
 ```
 ### Check out the code and install: 
 ```sh
-git clone https://github.com/nguyennm1024/dict-guided.git
+git clone https://github.com/VinAIResearch/dict-guided.git
 cd dict-guided
 python setup.py install build develop
 ```
