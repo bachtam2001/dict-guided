@@ -79,6 +79,8 @@ datasets
 ##### Installation
 
 ```sh
+apt update 
+apt install build-essential
 conda create -n dict-guided -y python=3.7
 conda activate dict-guided
 conda install -y pytorch torchvision cudatoolkit=10.2 -c pytorch
