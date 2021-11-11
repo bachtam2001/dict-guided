@@ -74,24 +74,25 @@ datasets
 - python=3.7
 - torch==1.4.0
 - detectron2==0.2
+- ubuntu=18.04
 
 ##### Installation
 
 ```sh
 conda create -n dict-guided -y python=3.7
 conda activate dict-guided
-conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
-python -m pip install ninja yacs cython matplotlib tqdm opencv-python shapely scipy tensorboardX pyclipper Polygon3 weighted-levenshtein editdistance
+conda install -y pytorch torchvision cudatoolkit=10.2 -c pytorch
+python -m pip install ninja yacs cython matplotlib tqdm opencv-python shapely scipy tensorboardX pyclipper Polygon3 weighted-levenshtein editdistance dict_trie
 
 # Install Detectron2
-python -m pip install detectron2==0.2 -f \
-  https://dl.fbaipublicfiles.com/detectron2/wheels/cu100/torch1.4/index.html
+python -m pip install detectron2 -f \
+  https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.10/index.html
 ```
 ### Check out the code and install: 
 ```sh
 git clone https://github.com/nguyennm1024/dict-guided.git
 cd dict-guided
-python setup.py install
+python setup.py install build develop
 ```
 
 ##### Download vintext pre-trained model
